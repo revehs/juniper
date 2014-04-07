@@ -1,4 +1,13 @@
-set system host-name hans
-set system domain-name hans    
+set vlans vlan3300 l3-interface vlan.3300
+set interfaces vlan unit 3200 description uclouadd1
+set interfaces vlan unit 3200 family inet address 30.0.0.1/24
+set firewall family inet filter VP1_ACL term 10 from source-address 30.0.0.1/24
+set firewall family inet filter VP1_ACL term 10 from destination-address 30.0.0.2/24
+set firewall family inet filter VP1_ACL term 10 then count accept_filter
+set firewall family inet filter VP1_ACL term 10 then accept
+set firewall family inet filter VP1_ACL term 20 from source-address 30.0.0.1/24
+set firewall family inet filter VP1_ACL term 20 then count discard_filter
+set firewall family inet filter VP1_ACL term 20 then discard
+set firewall family inet filter VP1_ACL term default then accept
+set interfaces vlan unit 3200 family inet filter input ucloudadd1_ACL
 
-e

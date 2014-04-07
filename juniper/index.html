@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <style type="text/css">
+            body {
+                font-size: 0.8em;
+                font-family: dotum;
+                line-height: 1.6em;
+            }
+            header {
+                border-bottom: 5px solid green;
+                padding: 10px 40px;
+            }
+            nav {
+                float: left; 
+                margin-right: 20px;
+                min-height: 500px;
+                border-right: 1px solid #ccc;
+            }
+            nav ul {
+                list-style: none;
+                padding-left: 20;
+                padding-right: 40px;
+            }
+            article {
+                float: left;
+            }
+            a {
+                text-decoration: none;
+            }
+            a:link, a:visited {
+                color: #333;
+            }
+            a:hover {
+                color: #f60;
+            }
+            h1 {
+                font-size: 1.4em;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div>
+        <header>
+        <h1><a href="http://14.63.205.132:8091">Network Device Controller</h1>
+        V1.1
+        </header>
+            <nav>
+                <ul>
+                    <h5> 네트워크 스위치 </h5>
+                    <li>Juniper</li>      
+                    <br>
+		    <li><a href="http:///explorer.html">Arista</a></li>
+                    <br>
+                    <li><a href="http://20.0.0.3">Citrix Netscaler</a></li>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>                    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h5> 관련 링크 </h5>
+                    <li><a href="http://cloud-nms.kt.com">ucloud NMS</a>
+                    </li>
+                    <li><a href="https://ipcvpn.kt.com">IPC VPN</a>
+                    </li>
+                    <li><a href="http://ucloudbiz.com">ucloudbiz Home</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <article>
+            <h3>Juniper</h3>
+                <div>
+                    <p>Currently registered switch : EX2200 - ves</p>
+                    <br>
+                    <ul>
+                        <li>API Check (set config only)</li>
+    <!--                <fieldset> -->
+                        <legend>
+                          
+                        </legend>
+                        <form action="./index2.php" method="POST">
+                            <p>
+                              
+                                       
+                                <textarea name="config" rows="17" cols="70" >set system host-name 41</textarea>
+                            </p>
+                            <p>
+                               Response :
+                                <select name="format">
+                                    <option value="set">set</option>
+                                    <option value="text">text</option>
+                                    <option value="xml">xml</option>
+                                </select>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="submit" value="컨피그 API 전송"/>
+                            </p>
+                        
+                        </form>
+      <!--                 </fieldset> -->
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+
+                    </ul>
+
+                </div>
+            </article>
+        </div>
+    </body>
+
+</html>
