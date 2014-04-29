@@ -1,0 +1,7 @@
+AuthUserFile /home/hans/git/juniper/juniper/secret/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+<Limit GET POST OPTIONS>
+require valid-user
+</Limit>
