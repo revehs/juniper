@@ -7,7 +7,7 @@
 		$nn = $_REQUEST['config'];
 		file_put_contents($file, $nn); 
 		
-		$command = "/home/hans/git/juniper/juniper/module_set.py";
+		$command = "/home/hans/git/juniper/juniper/module_cli.py";
                 $result = shell_exec($command);
                 echo "<pre>$result</pre>";
                 ?>

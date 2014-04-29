@@ -1,8 +1,7 @@
-
-
 <!DOCTYPE html>
 <html>
     
+
     <head>
         <meta charset="utf-8" />
         <style type="text/css">
@@ -47,17 +46,17 @@
     <body>
         <div>
         <header>
-        <h1><a href="http://14.63.205.132:8091">Network Device Controller</h1>
-        V1.1
+        <h1><a href="http://14.63.205.132:8091">CIP Automation</h1>
+        V1.11
         </header>
             <nav>
                 <ul>
                     <h5> 네트워크 스위치 </h5>
                     <li>Juniper</li>      
                     <br>
-		    <li><a href="http:///explorer.html">Arista</a></li>
-                    <br>
-                    <li><a href="http://20.0.0.3">Citrix Netscaler</a></li>
+		    <li><a href="http://">Cisco</a></li>
+                    <br><br><br>
+                 <!--  <li><a href="http://20.0.0.3">Citrix Netscaler</a></li> -->   
                     <br>
                     <br>
                     <br>
@@ -71,13 +70,7 @@
                     <br>
                     <br>
                     <br>
-                    <h5> 관련 링크 </h5>
-                    <li><a href="http://cloud-nms.kt.com">ucloud NMS</a>
-                    </li>
-                    <li><a href="https://ipcvpn.kt.com">IPC VPN</a>
-                    </li>
-                    <li><a href="http://ucloudbiz.com">ucloudbiz Home</a>
-                    </li>
+
                 </ul>
             </nav>
 
@@ -87,8 +80,28 @@
                     <p>Currently registered switch : EX2200 - ves</p>
                     <br>
                     <ul>
-                        <li>API Check (set config only)</li>
+                        <li>Enter the client Email</li>
     <!--                <fieldset> -->
+                        <legend>
+                          
+                        </legend>
+                        <form action="./emailindex2.php" method="POST">
+                            <p>
+                              
+                                       
+                                <textarea name="config" rows="4" cols="60" >ucloudadd1@yopmail.com</textarea>                           
+                            </p> 
+                            <p>
+
+                            <input type="submit" value="CIP컨피그 등록 - show compare"/>
+                            </p>
+                        
+                        </form>
+                        <br>
+                        <br><br><br><br>
+                        <br>
+                                                <li>Manual Config (set config only)</li>
+
                         <legend>
                           
                         </legend>
@@ -96,26 +109,15 @@
                             <p>
                               
                                        
-                                <textarea name="config" rows="17" cols="70" >set system host-name 41</textarea>
-                            </p>
+                                <textarea name="config" rows="2" cols="60" >set system host-name 41</textarea>                           
+                            </p> 
                             <p>
-                               Response :
-                                <select name="format">
-                                    <option value="set">set</option>
-                                    <option value="text">text</option>
-                                    <option value="xml">xml</option>
-                                </select>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                             <input type="submit" value="컨피그 API 전송"/>
                             </p>
                         
                         </form>
-      <!--                 </fieldset> -->
                         <br>
-                        <br>
-                        <br>
-                        <br>
-
 
                     </ul>
 

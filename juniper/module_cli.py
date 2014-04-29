@@ -2,9 +2,8 @@
 
 from jnpr.junos.device import Device
 from jnpr.junos.utils.config import Config
-import MySQLdb
 
-dev = Device(host='20.0.2.31',user='admin',password='ktcloud00')
+dev = Device(host='20.0.2.31',user='admin',password='password')
 dev.open()
 
 cu = Config(dev)
