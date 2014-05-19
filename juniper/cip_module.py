@@ -1,20 +1,15 @@
 #! /usr/bin/env python
 
-import sys
-print sys.path
-
 from jnpr.junos import Device
 from netaddr import *
 from jnpr.junos.utils.config import Config
 import MySQLdb
    
-print "10111"
 #val = raw_input("Customer ID:")
 #print val
 # val = "ucloudadd1@yopmail.com"
 f = file("emailconfig.set","r")
 val = f.read()
-print val
 
 db= MySQLdb.connect(host="20.0.0.103",user="root",passwd="ktcloud00",db="test")
 cursor=db.cursor()
@@ -23,8 +18,6 @@ query_cmd="select * from cip_portal where customer_id = '"+val+"';"
 cursor.execute(query_cmd)
 result =  cursor.fetchall()
 """print result"""
-
-print "11111"
   
 dev = Device(host='20.0.2.31',user='admin',password='password')
 dev.open()
@@ -59,7 +52,6 @@ set_cmd = 'set vlans '+vlan_name+' l3-interface vlan.'+vlan+"""
 
 print(type(set_cmd))
 print(set_cmd)
-print "1211"
 
 print cu.load(set_cmd, format='set')
 print cu.pdiff()

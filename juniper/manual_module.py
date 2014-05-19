@@ -13,5 +13,3 @@ print cu.pdiff()
 
 dev.close()
 
-
-
