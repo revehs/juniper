@@ -8,7 +8,7 @@ import MySQLdb
 #val = raw_input("Customer ID:")
 #print val
 # val = "ucloudadd1@yopmail.com"
-f = file("emailconfig.set","r")
+f = file("cip_file.set","r")
 val = f.read()
 
 db= MySQLdb.connect(host="20.0.0.103",user="root",passwd="ktcloud00",db="test")
@@ -18,8 +18,8 @@ query_cmd="select * from cip_portal where customer_id = '"+val+"';"
 cursor.execute(query_cmd)
 result =  cursor.fetchall()
 """print result"""
-  
-dev = Device(host='20.0.2.31',user='admin',password='password')
+
+dev = Device(host='20.0.2.31',user='admin',password='ktcloud00')
 dev.open()
  
 def get_net(gateway, netmask):
